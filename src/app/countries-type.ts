@@ -4,7 +4,7 @@ export interface CountriesType {
     porpulation: Number;
     region: string;
     capital: string;
-    photo: string;
+    flag: string;
  
 
 }
