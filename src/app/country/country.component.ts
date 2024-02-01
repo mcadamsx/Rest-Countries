@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CountriesType } from '../countries-type';
 import { CommonModule } from '@angular/common';
-import { CountriesComponent } from '../countries/countries.component';
+import {CountriesComponent} from "../countries/countries.component";
 
 @Component({
   selector: 'app-country',
