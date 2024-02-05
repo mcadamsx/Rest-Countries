@@ -12,7 +12,6 @@ import { CountriesServiceService } from '../countries-service.service';
   styleUrl: './countries.component.css'
 })
 export class CountriesComponent {
-
   countryList: CountriesType[] = [];
   countryService: CountriesServiceService = inject (CountriesServiceService);
   filteredCountriesList: CountriesType[] = [];

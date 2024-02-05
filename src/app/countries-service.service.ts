@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {environment} from "../environments/environment.development";
 import { CountriesType } from './countries-type';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,13 +7,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CountriesServiceService {
-  
   protected countriesList: CountriesType[] = [];
 
   constructor(private http: HttpClient) {}
 
   getAllCountries(): CountriesType[] {
-    this.http.get<CountriesType[]>('assets/data.json').subscribe((data) => {
+    this.http.get<CountriesType[]>(`${environment.endPoint}/countries`).subscribe((data) => {
       this.countriesList = data;
       console.log(this.countriesList);
     });
